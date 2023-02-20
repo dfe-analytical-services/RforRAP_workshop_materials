@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/dfe-stats-production-guidance.iml" filepath="$PROJECT_DIR$/.idea/dfe-stats-production-guidance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RforRAP_workshop_materials.iml" filepath="$PROJECT_DIR$/.idea/RforRAP_workshop_materials.iml" />
     </modules>
   </component>
 </project>
