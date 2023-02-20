@@ -1,72 +1,21 @@
 ---
 title: "workshop_R"
-author: "Department for Education"
-header-includes:
-- \usepackage{longtable}
-- \usepackage{graphics}
-- \usepackage{xparse}
-- \usepackage{moresize}
-- \usepackage{setspace}
-- \usepackage{tcolorbox}
-- \usepackage{wrapfig}
-- \usepackage{helvet}
-- \usepackage{sectsty}
-- \usepackage{fancyhdr}
-- \usepackage{xpatch}
-- \usepackage{booktabs}
-- \onehalfspacing
-- \pagestyle{fancy}
-- \definecolor{gssmidblue}{RGB}{32, 115, 188}
-- \definecolor{dfeheadingblue}{RGB}{16, 79, 117}
-- \renewcommand{\familydefault}{\sfdefault}
-- \allsectionsfont{\color{dfeheadingblue}}
-- \sectionfont{\color{dfeheadingblue}\fontsize{16}{18}\selectfont}
-- \fancyhead[C]{}
-- \fancyhead[RL]{}
-- \fancyfoot[LR]{}
-- \fancyfoot[C]{\sffamily \thepage}
-- \renewcommand{\headrulewidth}{0pt}
-- \renewcommand{\footrulewidth}{0pt}
-- \futurelet\TMPfootrule\def\footrule{{\color{gssmidblue}\TMPfootrule}}
-- \usepackage{floatrow}
-- \floatsetup[figure]{capposition=top}
-- \usepackage[tableposition=top]{caption}
-- \usepackage[titles]{tocloft}
-- \renewcommand{\cftdot}{}
-- \AtBeginDocument{\let\maketitle\relax}
-- \usepackage{cellspace}
-- \usepackage{etoolbox}
-- \colorlet{headercolour}{DarkSeaGreen}
-
-
-output:
-  pdf_document:
-    df_print: paged
-    toc: true
-    includes:
-      before_body: title.sty
-urlcolor: blue
-fontsize: 12pt
+layout: page
 ---
 
-```{r write title page, include=FALSE}
-connTitle <- file("title.sty")
-writeLines(c("\\resizebox{48mm}{!}{\\includegraphics{images/Department_for_Education.png}}\n",
-             "\\vspace*{0.24\\textheight}\n",
-             "\\raggedright\\HUGE{\\color{dfeheadingblue}\\textbf{DfE Statistics Development Team Workshops}} \n",
-             paste0("\\huge{\\color{dfeheadingblue}\\textbf{Coding RAP using R}}"),
-             "\\vspace*{2\\baselineskip} \n",
-             "\\normalsize \n \\newpage \n"), connTitle)
-close(connTitle)
-```
-
-\newpage
+---
 
 # Introduction
 
+---
+
 We've prepared this walkthrough guide for statistics publication teams as an introduction to the ways in which coding in R can be used for Reproducible Analystical Pipelines (RAPs), creating functions for typical tasks that teams may come across. The guide is intended to be step-by-step, building up from the very basics. The plan is to work through this in groups of 3-ish with access to experienced R users for support. If it starts too basic for your level, then just go through at your own/your group’s pace as you see fit. By no means can we cover everything in this walkthrough, so please see it as a prompt to ask follow-up questions as you’re working through on anything related to R, RAP and coding in general.
 
+---
+
 ## What is a RAP?
+
+---
 
 RAP stands for Reproducible Analytical Pipeline. The full words still hide the true meaning behind buzzwords and jargon though. What it actually means is using automation to our advantage when analysing data, and this is as simple as writing code such as an R script that we can click a button to execute and do the job for us. 
 
